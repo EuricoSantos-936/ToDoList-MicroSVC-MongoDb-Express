@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3003;
 
 // Connect to MongoDB
  mongoose
-   .connect("mongodb://localhost:27017/todolist", {})
+   .connect("mongodb://mongodb-container:27017/todolis", {})
    .then(() => {
      console.log("Connected to MongoDB");
    })

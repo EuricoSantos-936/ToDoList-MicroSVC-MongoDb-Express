@@ -1,0 +1,44 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo:4.4
+    container_name: mongodb-container
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodbdata:/data/db
+
+  create-task:
+    build:
+      context: ./create-task
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongodb
+  
+  delete-task:
+    build:
+      context: ./delete-task
+    ports:
+      - "3005:3005"
+    depends_on:
+      - mongodb
+
+  list-task:
+    build:
+      context: ./list-task
+    ports:
+      - "3004:3004"
+    depends_on:
+      - mongodb
+
+  update-task:
+    build:
+      context: ./update-task
+    ports:
+      - "3003:3003"
+    depends_on:
+      - mongodb
+
+volumes:
+  mongodbdata:
