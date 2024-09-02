@@ -6,9 +6,9 @@ This project contains multiple microservices to manage a To-Do list. Each micros
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/todo-list-microservices.git
-   cd todo-list-microservices
-   ´´´
+   git clone https://github.com/EuricoSantos-936/ToDoList-MicroSVC-MongoDb-Express.git
+   cd ToDoList-MicroSVC-MongoDb-Express
+   ```
 
 2. Build and start the services:
     ```bash
@@ -24,27 +24,27 @@ This project contains multiple microservices to manage a To-Do list. Each micros
     MongoDB will be available on port 27017
 
 ## Microservices
-
-    . Create Task: Adds a new task.
-    . Delete Task: Removes an existing task.
-    . List Task: Lists all tasks.
-    . Update Task: Updates an existing task.
+- Create Task: Adds a new task.
+- Delete Task: Removes an existing task.
+- List Task: Lists all tasks.
+- Update Task: Updates an existing task.
 
 ## Running the Services
 
 To start the services, simply run the following command from the root directory:
-    ```bash
-    docker-compose up --build
-    ```
+
+   ```bash
+   docker-compose up --build
+   ```
 
 This will build the Docker images for each microservice and start the containers. The services will be available at the ports listed above.
 
 ## Stopping the Services
 
 To stop the services, press CTRL+C in the terminal where the services are running, or use the following command in another terminal:
-    ```bash
+   ```bash
     docker-compose down
-    ```
+   ```
 This will stop and remove the containers.
 
 # Contributing
